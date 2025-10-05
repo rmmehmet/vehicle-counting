@@ -1,18 +1,3 @@
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>YOLO-based Object Counting & Tracking System</title>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial; line-height:1.6; padding:24px; max-width:900px; margin:auto; }
-    pre { background:#f6f8fa; padding:12px; overflow:auto; border-radius:6px; }
-    code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace; }
-    h1,h2,h3, h4 { color:#0b66c3; }
-    .badge { display:inline-block; padding:4px 8px; border-radius:999px; background:#eef6ff; color:#0b66c3; font-weight:600; margin-right:6px; }
-    ul { margin-top:0; }
-  </style>
-</head>
-<body>
   <h1>YOLO-Based Vehicle Counting and Tracking System</h1>
 
   <h2>Description</h2>
@@ -65,7 +50,7 @@ tracker = "botsort.yaml"
 region = [(0, int(h/2)), (int(w), int(h/2))]
 </code></pre>
 
-  <h2>🎯 COCO Example Class Indices</h2>
+  <h2>COCO Example Class Indices</h2>
   <p>Common COCO class indices you might use:</p>
   <ul>
     <li>Person = <code>0</code></li>
@@ -74,18 +59,16 @@ region = [(0, int(h/2)), (int(w), int(h/2))]
     <li>Truck = <code>7</code></li>
   </ul>
 
-  <h2>📊 Output</h2>
+  <h2>Output</h2>
   <p>
     The program displays the processed frames with bounding boxes, tracking IDs and analytics (in/out counts).
     It also writes the resulting annotated video to <code>object_counting_output.avi</code>.
   </p>
 
-  <h2>⚙️ Notes & Tips</h2>
+  <h2>Notes & Tips</h2>
   <ul>
     <li>Ensure the YOLO model file (<code>.pt</code>) is available at the given path or use an official pretrained model name supported by Ultralytics.</li>
     <li>Set <code>device</code> to <code>0</code> for GPU (if available) or <code>"cpu"</code> for CPU.</li>
     <li>Tune <code>conf</code> (confidence threshold) and tracker settings for your scenario to balance detection sensitivity and false positives.</li>
     <li>For faster processing, consider using a smaller YOLO model (nano / small) or resize frames before inference.</li>
   </ul>
-</body>
-</html>
