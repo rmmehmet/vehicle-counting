@@ -1,7 +1,9 @@
 import cv2
 from ultralytics import solutions
 
-cap = cv2.VideoCapture("object_tracking/data/sample_video.mp4")
+video_path = "object_tracking/data/sample-video.mp4"
+
+cap = cv2.VideoCapture(video_path)
 assert cap.isOpened(), "Error reading video file"
 
 # Video writer
